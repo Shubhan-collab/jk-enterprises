@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | J.K. Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #ffffff; color: var(--text-dark); padding-top: 80px; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 15px 8%; display: flex;
+            justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000;
+            border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 40px; width: auto; object-fit: contain; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 35px; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .gallery-container { padding: 80px 8%; background: #ffffff; }
+        .gallery-header { text-align: center; margin-bottom: 60px; }
+        .gallery-title { font-size: 42px; font-weight: 800; color: var(--primary); letter-spacing: -1.5px; margin-bottom: 15px; }
+        .gallery-subtitle { color: var(--text-muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .gallery-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); cursor: pointer; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s; }
+        .gallery-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border-color: var(--accent); }
+        .img-container { height: 300px; width: 100%; overflow: hidden; background: #e2e8f0; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-card:hover .img-container img { transform: scale(1.05); }
+        .card-details { padding: 20px; background: white; }
+        .card-details h4 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+        .card-details p { font-size: 14px; color: var(--text-muted); }
+
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px); z-index: 2000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .lightbox.active { opacity: 1; pointer-events: auto; }
+        .lightbox-content { max-width: 85%; max-height: 80vh; border-radius: 6px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); transform: scale(0.95); transition: transform 0.3s ease; }
+        .lightbox.active .lightbox-content { transform: scale(1); }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: white; font-size: 35px; font-weight: 300; cursor: pointer; user-select: none; }
+        .lightbox-close:hover { color: var(--accent); }
+        .lightbox-caption { position: absolute; bottom: 40px; color: #cbd5e1; font-size: 16px; font-weight: 500; text-align: center; }
+
+        footer { padding: 50px 20px; background: var(--primary); color: #94a3b8; text-align: center; font-size: 14px; }
+        @media(max-width: 768px) { nav { padding: 15px 5%; } .nav-links { display: none; } .gallery-container { padding: 60px 5%; } .gallery-title { font-size: 32px; } .lightbox-close { top: 20px; right: 25px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <a href="JK attempt3.html" class="logo-wrap">
+        <img src="JKlogo.jpg" alt="Logo" class="logo-img">
+        <div class="logo">J.K. Enterprises</div>
+    </a>
+    <div class="nav-links">
+        <a href="about.html">About</a> <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Featured Configurations</h1>
+            <p class="gallery-subtitle">Explore our operational industrial-grade deployments and structural spatial blueprints engineered around Mumbai.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card" onclick="openLightbox('JKstacking.jpg', 'Multi-Tier Stacker Arrays')">
+                <div class="img-container"><img src="JKstacking.jpg" alt="Multi-Tier Stacker Arrays"></div>
+                <div class="card-details"><h4>Multi-Tier Stacker Arrays</h4><p>High capacity vertical spatial extension optimization.</p></div>
+            </div>
+            <div class="gallery-card" onclick="openLightbox('JKstack2.jpg', 'Space Efficient Stacks')">
+                <div class="img-container"><img src="JKstack2.jpg" alt="Space Efficient Stacks"></div>
+                <div class="card-details"><h4>Space Efficient Stacks</h4><p>Premium dual & triple level mechanical modules.</p></div>
+            </div>
+            <div class="gallery-card" onclick="openLightbox('JKstack3.jpg', 'Subterranean Hydraulic Platforms')">
+                <div class="img-container"><img src="JKstack3.jpg" alt="Subterranean Hydraulic Platforms"></div>
+                <div class="card-details"><h4>Subterranean Pit Systems</h4><p>Low profile deep concrete base optimization layouts.</p></div>
+            </div>
+            <div class="gallery-card" onclick="openLightbox('JKstack4.jpg', 'High-Density Rotary Carousels')">
+                <div class="img-container"><img src="JKstack4.jpg" alt="High-Density Rotary Carousels"></div>
+                <div class="card-details"><h4>Rotary Mechanical Carousels</h4><p>Automated multi-slot rotational vehicle storage systems.</p></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" class="lightbox-content" src="" alt="View System">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 J.K. Enterprises. All Rights Reserved. Engineered Parking Systems Mumbai.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Website Designed & Developed by Shubhan Mantri</p>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc, captionText) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const caption = document.getElementById('lightboxCaption');
+            img.src = imgSrc;
+            caption.innerText = captionText;
+            modal.classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('active');
+        }
+        document.addEventListener('keydown', function(e) { if (e.key === "Escape") closeLightbox(); });
+    </script>
+</body>
+</html>

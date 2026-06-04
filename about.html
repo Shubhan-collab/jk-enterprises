@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate History & Legacy | J.K. Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;       /* Deep Slate Blue */
+            --accent: #2563eb;        /* Engineering Blue */
+            --accent-hover: #1d4ed8;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding-top: 80px; 
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);          
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+
+        /* History Content Layout */
+        .history-container {
+            padding: 80px 8%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .history-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .history-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+        }
+
+        .history-subtitle {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .history-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            margin-bottom: 40px;
+        }
+
+        .history-text p {
+            font-size: 17px;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .history-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlights Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-box h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 50px 20px;
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        @media(max-width: 768px) {
+            nav { padding: 15px 5%; }
+            .nav-links { display: none; }
+            .history-container { padding: 60px 5%; }
+            .history-title { font-size: 32px; }
+            .history-card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="JK attempt3.html" class="logo-wrap">
+            <img src="JKlogo.jpg" alt="Logo" class="logo-img">
+            <div class="logo">J.K. Enterprises</div>
+        </a>
+        <div class="nav-links">
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="history-container">
+        <div class="history-header">
+            <span class="history-subtitle">Over 4 Decades of Engineering Excellence</span>
+            <h1 class="history-title">Our Heritage & Legacy</h1>
+        </div>
+
+        <div class="history-card">
+            <div class="history-text">
+                <p>Please allow us to introduce ourselves. We are proudly established in the heavy industrial fabrication landscape, delivering precision-engineered configurations for more than 40 years.</p>
+                
+                <p>Our parent organization, <strong>M/s Allied Electricals and Mechanical Industries</strong>, was founded in the year <strong>1969 by Mr. K D Mantri</strong>. We commenced operations focusing heavily on the specialized manufacturing of Printing Cylinders, Fixed Shaft Rollers, Rubber Rollers, and Ideal Rollers equipped with Dynamic Balancing systems serving the Flexible Printing industry. Over the years, our core capabilities expanded heavily into structural M.S. / S.S. arrangements and robust precision sheet metal fabrication.</p>
+                
+                <p>As a recognized pioneer and continuous leader in our domain, our company commands exceptional goodwill and an unblemished structural reputation across commercial markets.</p>
+                
+                <p>In <strong>2004</strong>, we initiated strategic infrastructural expansion by acquiring our second operational manufacturing facility situated at <strong>Goregaon East</strong>, successfully doubling our net production capacity. Simultaneously, we stepped extensively into technical fabrication frameworks for the HVAC sector—initially delivering specialized Electrical Panel Modules, structural Chiller Platforms, and complex AHU Support layouts.</p>
+                
+                <p>Progressing naturally from component fabrication, we scaled up into comprehensive turnkey sub-contracts executing Chilled Water Piping and specialized Copper Piping networks for high-capacity PAC Units, VRF Systems, commercial Package units, and advanced industrial ventilation ducting.</p>
+                
+                <p>Needless to say, we are already catering to the complex technical specifications of diverse large-scale organizations to their entire satisfaction. Today, after successfully commissioning and setting up between <strong>5,000 to 8,000 tons of air conditioning setups</strong> on a sub-contract basis, we are scaling forward to manage these large-scale HVAC engineering frameworks directly under our signature corporate umbrella.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4>Turnkey Capabilities</h4>
+                    <p>Our deep structural expertise and decades of field experience grant us full engineering confidence to execute difficult, highly challenging architectural workflows covering end-to-end System Sales, Custom Design, Precision Installation, Commissioning, and Long-Term Servicing.</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Engineered Precision</h4>
+                    <p>Backed by teams of qualified technicians and senior engineers, our workforce stands distinguished by sharp mechanical precision paired with comprehensive hand-on field execution across Mumbai.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 J.K. Enterprises. All Rights Reserved. Engineered Parking Systems Mumbai.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Website Designed & Developed by Shubhan Mantri</p>
+    </footer>
+
+</body>
+</html>

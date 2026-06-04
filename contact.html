@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | J.K. Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #ffffff; color: var(--text-dark); padding-top: 80px; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 15px 8%; display: flex;
+            justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000;
+            border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 40px; width: auto; object-fit: contain; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 35px; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .contact-container { padding: 80px 8%; background: var(--bg-light); }
+        .contact-header { text-align: center; margin-bottom: 60px; }
+        .contact-title { font-size: 42px; font-weight: 800; color: var(--primary); letter-spacing: -1.5px; margin-bottom: 15px; }
+        .contact-subtitle { color: var(--text-muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+        .contact-content { max-width: 650px; margin: auto; }
+        .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; text-align: center; }
+        .info-block { background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); }
+        .info-block span { display: block; font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; }
+        .info-block p { font-size: 16px; font-weight: 600; color: var(--primary); }
+        .info-block a { color: var(--accent); text-decoration: none; }
+
+        form { display: flex; flex-direction: column; gap: 20px; background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.02); }
+        input, textarea, select { padding: 16px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 15px; background: var(--bg-light); outline: none; transition: all 0.2s; color: var(--text-dark); width: 100%; }
+        input:focus, textarea:focus, select:focus { border-color: var(--accent); background: white; box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
+        textarea { height: 150px; resize: none; }
+        .submit { background: var(--accent); color: white; border: none; padding: 16px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+        .submit:hover { background: var(--accent-hover); }
+
+        footer { padding: 50px 20px; background: var(--primary); color: #94a3b8; text-align: center; font-size: 14px; }
+        @media(max-width: 768px) { nav { padding: 15px 5%; } .nav-links { display: none; } .contact-container { padding: 60px 5%; } .contact-title { font-size: 32px; } .contact-info { grid-template-columns: 1fr; gap: 10px; } form { padding: 25px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <a href="JK attempt3.html" class="logo-wrap">
+        <img src="JKlogo.jpg" alt="Logo" class="logo-img">
+        <div class="logo">J.K. Enterprises</div>
+    </a>
+    <div class="nav-links">
+        <a href="about.html">About</a> <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <main class="contact-container">
+        <div class="contact-header">
+            <h1 class="contact-title">Request an Engineering Strategy & Quote</h1>
+            <p class="contact-subtitle">Connect with our structural management teams to configure site layout assessments.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-block"><span>Executive Officer</span><p>Nilesh Mantri</p></div>
+                <div class="info-block"><span>Direct Telephone</span><p><a href="tel:+919819811007">+91 98198 11007</a></p></div>
+                <div class="info-block"><span>Corporate Email</span><p><a href="mailto:nileshkmantri@gmail.com">nileshkmantri@gmail.com</a></p></div>
+                <div class="info-block"><span>Operational Location</span><p>Mumbai, MH</p></div>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="project-form">
+                <input type="hidden" name="access_key" value="PASTE_YOUR_ACCESS_KEY_HERE">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <label style="display:block; margin-bottom:8px; font-weight:500; font-size:14px;">Contact Details</label>
+                    <input type="text" name="Client_Name" placeholder="Your Name / Company Name" required style="margin-bottom: 10px;">
+                    <input type="email" name="Client_Email" placeholder="Corporate Email Address" required style="margin-bottom: 10px;">
+                    <input type="text" name="Client_Phone" placeholder="Mobile / WhatsApp Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; margin-bottom:8px; font-weight:500; font-size:14px;">Project Environment</label>
+                    <select name="Property_Type" required>
+                        <option value="" disabled selected>Select Property Type</option>
+                        <option value="Residential Society">Residential Society / Redevelopment Project</option>
+                        <option value="Commercial Office">Commercial Complex / IT Park</option>
+                        <option value="Industrial">Industrial Facility / Warehouse</option>
+                        <option value="Private Villa">Private Bungalow / Villa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; margin-bottom:8px; font-weight:500; font-size:14px;">System Preference (If known)</label>
+                    <select name="Preferred_System">
+                        <option value="Not Sure / Need Consultation" selected>Not Sure (Request Site Survey)</option>
+                        <option value="Triple Level Stack Parking">Triple Level Stack Parking</option>
+                        <option value="Dependent Pit Parking">Dependent Pit Parking</option>
+                        <option value="Cantilever Parking">Cantilever Parking</option>
+                        <option value="Rotary Vertical Carousel">Rotary Vertical Carousel</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; margin-bottom:8px; font-weight:500; font-size:14px;">Target Capacity</label>
+                    <input type="number" name="Estimated_Slots_Needed" placeholder="Approximate number of parking slots required (e.g., 12)" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; margin-bottom:8px; font-weight:500; font-size:14px;">Site Dimensions & Specific Requirements</label>
+                    <textarea name="Project_Requirements" placeholder="Please provide ceiling height, basement depth, or any specific structural constraints if available..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit">Submit Request for Quote</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 J.K. Enterprises. All Rights Reserved. Engineered Parking Systems Mumbai.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Website Designed & Developed by Shubhan Mantri</p>
+    </footer>
+
+</body>
+</html>

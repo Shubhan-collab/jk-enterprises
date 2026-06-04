@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions | J.K. Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #ffffff; color: var(--text-dark); padding-top: 80px; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 15px 8%; display: flex;
+            justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000;
+            border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 40px; width: auto; object-fit: contain; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 35px; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .services-container { padding: 80px 8%; background: var(--bg-light); min-height: calc(100vh - 180px); }
+        .services-header { text-align: center; margin-bottom: 60px; }
+        .services-title { font-size: 42px; font-weight: 800; color: var(--primary); letter-spacing: -1.5px; margin-bottom: 15px; }
+        .services-subtitle { color: var(--text-muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { padding: 40px 30px; border-radius: 12px; background: white; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border-color: var(--accent); }
+        .card h3 { margin-bottom: 16px; font-size: 22px; color: var(--primary); font-weight: 700; }
+        .card p { color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+
+        footer { padding: 50px 20px; background: var(--primary); color: #94a3b8; text-align: center; font-size: 14px; }
+        @media(max-width: 768px) { nav { padding: 15px 5%; } .nav-links { display: none; } .services-container { padding: 60px 5%; } .services-title { font-size: 32px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <a href="JK attempt3.html" class="logo-wrap">
+        <img src="JKlogo.jpg" alt="Logo" class="logo-img">
+        <div class="logo">J.K. Enterprises</div>
+    </a>
+    <div class="nav-links">
+        <a href="about.html">About</a> <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <main class="services-container">
+        <div class="services-header">
+            <h1 class="services-title">Our Solutions</h1>
+            <p class="services-subtitle">High-yield mechanical architecture engineered to optimize modern high-rise and industrial environments.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="card">
+                <h3>Triple Level Parking</h3>
+                <p>Triples your localized vehicle capacity metrics by stacking three independent sedans or SUVs inside a singular structural parking footprint.</p>
+            </div>
+            <div class="card">
+                <h3>Dependent Pit Parking</h3>
+                <p>Sub-grade hydraulic space optimization engineered explicitly for low-clearance residential basements and concrete multi-level setups.</p>
+            </div>
+            <div class="card">
+                <h3>Cantilever Parking</h3>
+                <p>Premium over-hanging structural configurations executing smooth horizontal load transfers without needing ground support pillars on the entry corridor.</p>
+            </div>
+            <div class="card">
+                <h3>Rotary Parking</h3>
+                <p>High-yield automated vertical carousel mechanics engineered to store dozens of vehicles securely within the real estate area of just two standard spaces.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 J.K. Enterprises. All Rights Reserved. Engineered Parking Systems Mumbai.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Website Designed & Developed by Shubhan Mantri</p>
+    </footer>
+
+</body>
+</html>
